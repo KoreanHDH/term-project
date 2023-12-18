@@ -1,0 +1,17 @@
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+plt.rcParams['font.family'] ='Malgun Gothic'
+plt.rcParams['axes.unicode_minus'] =False
+
+data = pd.read_csv('D:/장준서/Desktop/파이썬/report_1.csv', encoding='cp949')
+data = data.drop(0)
+
+data_t = data.T
+
+x = data_t.iloc[0]
+y = data_t.iloc[1]
+print(x)
+
+plt.bar(x,y)
+plt.show()
